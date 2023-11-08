@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+
+    <script>
+
+        function greet(a, b) {
+            if (a == '' || b == '')
+            return;
+            alert("Hi " + a + " you are " + b + " years old.");         
+        }
+
+    </script>
+    
+    <style>
+        input {
+            padding: 10px;
+            margin: 10px;
+            outline: none;
+        }
+    </style>
+
+</head>
+<body>
+    <h3>JAVASCRIPT FUNCTIONS</h3>
+
+    <form>
+
+        <input type="text" name="fName" placeholder="Enter your name"><br>
+        <input type="number" name="age" placeholder="Enter your age"><br>
+        <input type="submit" value="Submit" onclick="greet(fName.value, age.value)">
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects in JS</title>
+</head>
+<body>
+    <h3>JavaScript Objects</h3>
+
+    <script>
+
+        let webinar = {
+            "topic" : "Game Design",
+            "trainer" : "Mr. Lere",
+            'mode' : 'Online'
+        }
+
+        document.write('Topic : ' + webinar.topic + "<br><br>")
+        document.write('Tutor : ' + webinar.trainer + "<br><br>")
+        document.write('Mode of training : ' + webinar.mode + "<br><br>")
+
+        let txt = ''
+        let x;
+        for (x in webinar){
+            txt += '<br>' + webinar[x]
+        }
+
+        document.write (txt)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array in JS</title>
+</head>
+<body>
+
+    <h2>BUBBLE SORTING WITH JAVASCRIPT</h2>
+    <p>Formula: <i style="color: red; font-weight: bold;">n(n-1)</i></p>
+    <p>Where <i style="color: red; font-weight: bold;">n</i> is the amount of numbers to be sorted</p>
+    
+    
+    <script>
+
+        // let input = prompt('Enter a list of numbers separated by commas')
+        // let arr = input.split(",")
+
+        // console.log (arr);
+
+        // let cleanedInput = input.replace(/,/g, '');
+        // let n = cleanedInput.length
+
+        const arr = new Array (17, 27, 48, 11, 32, 36);
+        let i, j, temp;
+
+        document.write("Before Sorting :" + '<br/>');
+        for (i = 0; i < 6; i++) {
+            document.write(arr[i] + '<br/>')
+        }
+
+        for (i = 0; i < 6; i++) {
+            for (j = 0; j < 5; j++){
+                if (arr[j] > arr[j + 1]) {
+                    temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+
+        document.write("<br>" + "After Sorting :" + '<br/>');
+        for (i = 0; i < 6; i++) {
+            document.write(arr[i] + '<br/>')
+        }
+
+    </script>
+
+</body>
+</html>

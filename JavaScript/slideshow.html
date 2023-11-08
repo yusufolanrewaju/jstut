@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Slideshow</title>
+
+    <script>
+
+        let arr = new Array("../images/network.jpg", "../images/pic.jpg", "../images/bg3.png", "../images/bg-2.png");
+        let n = arr.length
+        let i = 1;
+        let ref;
+
+        function picLibrary() {
+            document.images[0].src = arr[i];
+            i++ 
+            if (i > (n-1))
+                i = 0;
+        }
+
+        function start(){
+            ref = setInterval("picLibrary()", 500);
+        }
+
+        function stop(){
+            clearInterval(ref);
+        }
+
+    </script>
+
+</head>
+<body onload="start()">
+    <h2>Slideshow in JAVASCRIPT</h2>
+
+    <img src="../images/pic.jpg" name="imageShow" onmouseover="stop()" onmouseout="start()">
+</body>
+</html>

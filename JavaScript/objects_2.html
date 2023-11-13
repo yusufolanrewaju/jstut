@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    
+    <h1>Objects in JavaScript</h1>
+
+    <script>
+
+        const person = { // Variables of  Objects created with this method are to be separated with commas
+            name: 'Yusuf',
+            age: 19,
+            'course of study': 'Computer Science'
+        }
+
+        console.log(person['course of study']) // Object variables with spaces between their names can only be access with square bracket referencing
+
+        const {name, age} = person; // Object Destructing
+        console.log(name);
+        console.log(age);
+
+        let pet = new Object();
+        pet.cat = 'Mussy';
+        pet.dog = 'Royal';
+        console.log(pet['cat'], pet.dog) // While using square brackets to reference variables of an object, they are to be put in quotes.
+
+        const me = {
+            fName: 'Yusuf',
+            lName: 'Olanrewaju',
+            age: 19,
+            course: 'Computer Science',
+            school: 'BOUESTI',
+            intro: function (){ // Function scan be added as an element of an object using Anonymous functions.
+                console.log(`My name is ${this.fName} ${this.lName}, I am a ${this.course} student in ${this.school}, Ekiti State. `)
+            }
+        }
+ 
+        person.sayHi = function(){ // adding a function element to an object from outside the object.
+            console.log('Hi, Welcome to my code page')
+        }
+
+        person.sayHi()
+        me.intro()
+
+
+
+    </script>
+
+</body>
+</html>

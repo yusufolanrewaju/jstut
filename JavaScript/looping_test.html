@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping</title>
+</head>
+<body>
+    
+    <h1>Loop, Break and Continue Test</h1>
+
+    <script>
+
+        const sibs = new Array('Olayinka', 'Olalere', 'Isola', 'Ayoka');
+
+        for (const name of sibs){
+            console.log(name);
+        }
+
+        const me = {
+            name: 'Yusuf',
+            age: 19,
+            school: 'BOUESTI'
+        }
+
+        for (const details in me) {
+            console.log(details + ' : ' + me[details])
+        }
+
+        let i = 0;
+        while(i < 5){
+            if (i == 3){break;}
+            console.log (`I have ${i} balls`);
+            i++ // not adding the increament will make the loop become an infinite loop
+        }
+
+        for (i = 0; i < 10; i++){
+            if (i>5 && i<8 ) {
+                continue; // this stops after 5 and continues from 8
+            }
+            console.log (`I am gonna eat ${i} buns`);
+        }
+
+    </script>
+
+</body>
+</html>

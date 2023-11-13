@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop</title>
+</head>
+<body>
+    
+    <h1>For Loop in JavaScript</h1>
+
+    <script>
+
+        // for loop
+        for (let i = 1; i <= 10; i++) {
+           console.log(`My name  is Yusuf, and I am gonna eat ${i} burgers`);
+        }
+
+        let obj = {
+            name: 'Yusuf',
+            age: 19,
+            country: 'NIgeria'
+        }
+
+        // for...in loop : It is used basically for objects
+        for (const property in obj) {
+            console.log(property + ':' + obj[property]);
+        }
+
+        const nums = [5,85,83,2,4];
+
+        // for...of : this list out the elements in the array. It is used basically for arrays
+        for (const item of nums) { 
+            console.log(item)
+        }
+
+    </script>
+
+</body>
+</html>

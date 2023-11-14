@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <h1>Arrow Function and IIFE</h1>
+
+    <!-- Immediately Invoked Function Expression -->
+
+
+    <script>
+
+        const years = [1990, 2003, 2004, 1987, 1856];
+        const ages = years.map(el => 2023-el); //Arrow function
+        // const ages = years.map(function (el){
+        //     return 2023 - el;
+        // })
+
+        console.log (ages)
+
+
+
+        // IIFE 
+       let result = (function(){ 
+            // we can also pass a parameter to the function and add an argument to it. function(name) for example
+            
+            let name = 'Musk'; // in case a parameter is passed, this line will be removed
+
+            console.log(name) // the IIFE will not function by default, but it'll when a pair of parenthesis is addde to the end of the fonction which will make it function instantaneously since it is an anonymous function
+
+            return name; // the return statement must be added so as for us to get a value when we call the variable in which the functioned is stored in
+
+        })() // the paremater passed will be in form of ('Yusuf')
+
+        console.log(result) // this will not return a value[it will return undefined] if the return statement was not added to the function.
+ 
+    </script>
+    
+</body>
+</html>

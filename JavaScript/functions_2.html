@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions In JavaScript</title>
+</head>
+<body>
+    
+    <h1>JavaScript Functions</h1>
+
+    <script>
+
+        function addition(a,b){  // basic function structure
+            return a+b;
+        }
+
+        console.log(addition(5,4))
+
+        //funtion declaration
+
+        const whatDoYouSay  = function(animal) {
+            switch (animal){
+                case 'dog':
+                    return animal + ' says woof.';
+                    break;
+                case 'cat':
+                    return animal + ' says meoww.';
+                    break;
+                case 'hen':
+                    return animal + ' says croo.'
+                    break;
+                default:
+                    return "The animal doesn't have a sound we know about"
+            }
+        }
+
+        console.log(whatDoYouSay('pig'));
+        console.log(whatDoYouSay('dog'));
+        console.log(whatDoYouSay('cat'));
+        console.log(whatDoYouSay('hen'));
+
+        function thisPerson (fName = 'Yusuf', lName = 'Olanrewaju', nationality='NIGERIAN', age = 19){
+
+            this.fName = fName;
+            this.lName = lName;
+            this.age = age;
+            this.nationality = nationality;
+        }
+
+    </script>
+
+</body>
+</html>

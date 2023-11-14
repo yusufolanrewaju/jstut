@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+    <h1>Closure</h1>
+
+    <!-- Closure is a function in it's lexical environment -->
+
+    <script>
+
+        function retirement(retirementAge) {
+            const a = ' years left until retirement.';
+
+            return function (yearOfBirth){
+                let age = new Date().getFullYear() - yearOfBirth; // I used the Date() function in JavaScript to get the present year of the time the code is accessed.
+                console.log('You have ' + (retirementAge -= age) + a);
+            }
+        }
+
+        let retirementNG = retirement(60);
+        let yearOfBirth = prompt('Enter your year of birth');
+        retirementNG(yearOfBirth);
+
+    </script>
+</body>
+</html>

@@ -12,13 +12,18 @@
     <script>
 
         let animals = new Array('Lion', 'Tiger', 'Sheep', 'Goat'); // new Array method for creating Arrays in Javascript
+
         animals.push('Camel', 'Donkey', 'Horse', 80000); // adding elements to the end of an array
+
         animals.shift(); // removing the first element of an array
+
         animals.unshift('Lion', 'Cow') // Adding elements to the beginning of an array
+
         animals.pop(); // removing the last element of an array
 
         console.log(animals[animals.length - 1]) // getting the last element of an array
-        console.log(animals.indexOf(80000)) // IndexOf is used to get the position of an element in an array
+        
+        console.log(animals.indexOf(80000)) // IndexOf is used to get the position of an element in an array. Will give -1 in this case because 80000 is no more one of the elements in the array
 
         animals.forEach (i => console.log(i));
 

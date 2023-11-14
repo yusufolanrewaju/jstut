@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+<body>
+
+    <h1>Spread Operator in JavaScript</h1>
+    <p>Spreads allows you to combine arrays. It is a way to make a complete separate copy of an array. Other arrays are usually added using <abbr title="elipses">...</abbr> to preceed the array name.</p>
+
+    <i>Check the source code to see an examples of how it is done.</i>
+
+    <script>
+
+        const ages = [18, 25, 19, 45, 84];
+
+        // var sum1 = addAllAges.apply(null, ages); // ES5
+
+        // const sum = addAllAges(...ages); //ES6
+
+        const myFams = new Array('Dad', 'Mum', 'Siblings');
+        const extFam = ['Uncles', 'Aunties', 'Cousins', 'Niece', 'Nephews'];
+        const generalFam = [...myFams, 'Me', ...extFam];
+        console.log(generalFam);
+
+    </script>
+    
+</body>
+</html>

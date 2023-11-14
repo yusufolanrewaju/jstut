@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trying Bubble sort</title>
+</head>
+<body>
+    
+    <script>
+
+        let input = prompt('Enter a list of numbers you want to sort separated by commas');
+        let ageString = input.split(",");
+        let ages = ageString.map(function(str){
+            return parseInt(str);
+        })
+
+        let n = ages.length
+        console.log (ages);
+
+        // const ages = [19, 25, 16, 78, 24, 45];
+
+        let i,j, memTemp;
+
+        document.write(' Before Sorting <br/><br/>')
+        for (i of ages){
+            document.write(i + '<br/>')
+        }
+
+        // for the bubble sort algorithm
+
+        for (i = 0; i < n; i++){
+            for(j = 0; j < (n-1); j++){
+                if (ages[j] > ages[j + 1]){
+                    memTemp = ages[j];
+                    ages[j] = ages[j + 1];
+                    ages[j + 1] = memTemp;
+                }
+            }
+        }
+
+        document.write('<br/> After Sorting: <br/><br/>')
+        for (i of ages){
+            document.write(`${i} <br/><br>`)
+        }
+
+    </script>
+
+</body>
+</html>

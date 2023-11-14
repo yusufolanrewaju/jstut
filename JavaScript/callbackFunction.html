@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack Function in JavaScript</title>
+</head>
+<body>
+    
+    <script>
+
+        let array = [1,2,3,4,5,6,7];
+
+        function higherOrder(someArray, callBack) {
+            for( i of someArray){
+                callBack(i);
+            }
+        }
+
+        function logNumber(num){
+            console.log(num);
+        }
+
+        higherOrder(array, logNumber);
+
+    </script>
+
+</body>
+</html>

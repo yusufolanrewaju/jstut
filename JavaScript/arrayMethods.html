@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+
+    <h1>Array Methods</h1>
+    <p>Array methods are callback functions</p>
+    <p>They include:</p>
+    <ul>
+        <li>.map()</li>
+        <li>.filter()</li>
+        <li>.reduce()</li>
+        <li>.sort()</li>
+    </ul>
+
+    <p><i>All outputs are displayed on the console tab in the inspect section</i></p>
+    
+    <script>
+
+        // MAP METHOD
+        const arr1 = new Array(1,2,3,4,5);
+        const map1 = arr1.map(x => x ** 3); // .map() function stores the new array differently from the original one. i.e it creates another array for the new one. It is a callback function
+
+        console.log(map1); // the new array stored in map1
+        console.log(arr1); // the original array still displays, which means it was not overwritten
+
+
+
+        // FILTER METHOD
+        const words = ['name', 'password', 'user', 'precision', 'insist'];
+
+        const result = words.filter(word => word.length > 5) // the filter method also saves the results to a new array. I works based on conditions given in the filter function.
+
+        console.log(result);
+        console.log(words);
+
+
+
+        // REDUCE METHOD
+        const arr2 = [3,4,5,6];
+        const arr3 = ['my', 'name', 'is', 'Yusuf']
+
+        const reducers = (reducedResult, currentValue) => reducedResult * currentValue; // reduce method from its name, makes many values combine into a single value.
+
+        const reducer = (reducedResult, currentValue) => reducedResult + ' ' + currentValue; // this works for better the string array which I used to concatenate it
+
+        console.log(arr2.reduce(reducers)); // not only numbers can be used with the reduce method, strings can also be made a sentence with the reduce method.
+
+        console.log(arr3.reduce(reducer)); // any arithmetic operation can be performed with the reduce method.
+
+
+
+        // SORT METHOD
+        const months = ['Mar', 'Jan' , 'Feb', 'Dec', 'May', 'Oct', 'Jul', 'Sept'];
+        months.sort();
+        console.log(months) // the output is not based on normal human logic, it is based on the order of the alphabets.
+
+        const arr4 = [4,78,8,90,6,36];
+        arr4.sort();
+        console.log(arr4) // here, it sorts it in accordance to the position of the first digit on the number counter.
+
+        arr4.sort((a,b) => a - b)
+        console.log(arr4); // using this method, the browser will understand that we want it to arrange the numbers in ascending ASCII character order. It works only on Numbers
+
+
+    </script>
+
+</body>
+</html>

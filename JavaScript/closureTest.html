@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    
+    <script>
+
+        let  greet = name => console.log(`Hello my name is ${name}! Nice to meet you.`);
+        // arrow functions do not need braces
+
+        greet('Yusuf')
+
+        function addTwoNums(a,b){
+            let sum = a + b;
+            return function closurePractice(){
+                return sum * 4;
+            }
+        }
+
+        let firstSum = addTwoNums(3,5)
+        let multSum = firstSum()
+
+        console.log(multSum)
+
+    </script>
+
+</body>
+</html>

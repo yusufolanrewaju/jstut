@@ -26,8 +26,17 @@
         let i, j, temp;
 
         document.write("Before Sorting :" + '<br/>');
-        for (i = 0; i < 6; i++) {
-            document.write(arr[i] + '<br/>')
+        for (i of arr) {
+            document.write(i + '<br/>') 
+            /* for...in loop can work on arrays provided they are referenced with the array name and the looped variable in square brackets
+
+            *** In this case, 
+
+            ** for (i in arr) {
+            ** document.write(arr[i] + '<br/>')
+            ** } 
+
+            will function normally*/
         }
 
         for (i = 0; i < 6; i++) {
